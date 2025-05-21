@@ -1,6 +1,6 @@
 ---
 description: 
 globs: 
-alwaysApply: false
+alwaysApply: true
 ---
 Do not run any command that does not stop after 1 minute in the foreground. You can run those in the background. do not run sudo commands as they have to be approved by the user.
