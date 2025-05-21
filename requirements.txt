@@ -1,0 +1,6 @@
+flask
+flask-socketio
+openai
+requests
+nest_asyncio
+eventlet 
