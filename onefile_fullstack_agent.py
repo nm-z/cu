@@ -1505,9 +1505,26 @@ if __name__ == '__main__':
         start_x_and_vnc()
         runtime_health_checks()
 
-        # --- Always use fixed port 7860 for UI server ---
-        ui_port = 7860
-
+        # --- Find an available port for UI server ---
+        ui_port = UI_PORT  # Start with the default
+        port_available = False
+        max_attempts = 10
+        
+        for port_attempt in range(ui_port, ui_port + max_attempts):
+            try:
+                with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as test_socket:
+                    test_socket.bind(('127.0.0.1', port_attempt))
+                    # If we get here, the port is available
+                    ui_port = port_attempt
+                    port_available = True
+                    break
+            except OSError:
+                logger.warning("Port %s is in use, trying next port...", port_attempt)
+                continue
+                
+        if not port_available:
+            fatal("Could not find an available port after %s attempts", max_attempts)
+        
         # Write chosen port to file for test scripts
         with open("ui_port.txt", "w", encoding='utf-8') as f:
             f.write(str(ui_port))
