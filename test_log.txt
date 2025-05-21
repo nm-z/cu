@@ -1,0 +1,51 @@
+[2025-05-21T06:14:47.805Z] Starting browser...
+[2025-05-21T06:14:47.991Z] Navigating to http://127.0.0.1:7860/...
+[2025-05-21T06:14:48.001Z] WS REQUEST: http://127.0.0.1:7860/socket.io.js
+[2025-05-21T06:14:48.478Z] BROWSER CONSOLE: error: Failed to load resource: the server responded with a status of 404 ()
+[2025-05-21T06:14:48.478Z] BROWSER CONSOLE: error: Refused to execute script from 'https://cdn.jsdelivr.net/npm/@novnc/novnc@1.4.0/core/novnc-core.min.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.
+[2025-05-21T06:14:48.488Z] BROWSER CONSOLE: log: DOM content loaded - initializing...
+[2025-05-21T06:14:48.489Z] Waiting for input field...
+[2025-05-21T06:14:48.492Z] BROWSER CONSOLE: log: Socket.IO connected
+[2025-05-21T06:14:48.493Z] BROWSER CONSOLE: error: Failed to load resource: the server responded with a status of 404 (NOT FOUND)
+[2025-05-21T06:14:48.498Z] Input field found
+[2025-05-21T06:14:48.499Z] Checking for VNC canvas...
+[2025-05-21T06:14:49.488Z] BROWSER CONSOLE: error: RFB not available - noVNC library not loaded correctly
+[2025-05-21T06:14:51.502Z] VNC canvas info: {"hasChildren":false,"hasCanvas":false,"childrenCount":0,"html":""}
+[2025-05-21T06:14:51.502Z] VNC desktop check failed: VNC canvas is visible but has no child elements (noVNC not embedded). Details: {"hasChildren":false,"hasCanvas":false,"childrenCount":0,"html":""}
+[2025-05-21T06:14:51.502Z] Checking for VNC backend via screenshot endpoint...
+[2025-05-21T06:14:51.507Z] Screenshot API response status: 200, has image data: true
+[2025-05-21T06:14:51.507Z] Typing test prompt: Try each of your tools, one at a time. Do not simulate tool calls. After each, continue to the next. Stop only when all tools are used.
+[2025-05-21T06:14:51.586Z] Sending message...
+[2025-05-21T06:14:51.586Z] Waiting for response...
+[2025-05-21T06:14:51.595Z] BROWSER CONSOLE: log: Received chat update: JSHandle@object
+[2025-05-21T06:14:54.588Z] Saved page HTML to page_debug.html
+[2025-05-21T06:14:54.588Z] Waiting for tool log entries...
+[2025-05-21T06:14:54.588Z] Tool log entries (0): 0
+[2025-05-21T06:14:57.590Z] Tool log entries (1): 0
+[2025-05-21T06:15:00.593Z] Tool log entries (2): 0
+[2025-05-21T06:15:03.595Z] Tool log entries (3): 0
+[2025-05-21T06:15:06.599Z] Tool log entries (4): 0
+[2025-05-21T06:15:09.603Z] Tool log entries (5): 0
+[2025-05-21T06:15:12.606Z] Tool log entries (6): 0
+[2025-05-21T06:15:15.608Z] Tool log entries (7): 0
+[2025-05-21T06:15:18.610Z] Tool log entries (8): 0
+[2025-05-21T06:15:21.614Z] Tool log entries (9): 0
+[2025-05-21T06:15:24.617Z] Tool log entries (10): 0
+[2025-05-21T06:15:27.621Z] Tool log entries (11): 0
+[2025-05-21T06:15:30.625Z] Tool log entries (12): 0
+[2025-05-21T06:15:33.628Z] Tool log entries (13): 0
+[2025-05-21T06:15:36.631Z] Tool log entries (14): 0
+[2025-05-21T06:15:39.633Z] Tool log entries (15): 0
+[2025-05-21T06:15:42.637Z] Tool log entries (16): 0
+[2025-05-21T06:15:45.641Z] Tool log entries (17): 0
+[2025-05-21T06:15:48.644Z] Tool log entries (18): 0
+[2025-05-21T06:15:51.648Z] Tool log entries (19): 0
+[2025-05-21T06:15:54.651Z] FAIL: Not enough tool log entries: 0
+[2025-05-21T06:15:54.651Z] Checking for tool call success...
+[2025-05-21T06:15:54.651Z] FAIL: No tool_call_success found in log
+[2025-05-21T06:15:54.651Z] Checking for screenshot in tool log...
+[2025-05-21T06:15:54.651Z] FAIL: No image_b64 found in tool log
+[2025-05-21T06:15:54.651Z] FAIL: VNC Desktop is not embedded in the window: VNC canvas is visible but has no child elements (noVNC not embedded). Details: {"hasChildren":false,"hasCanvas":false,"childrenCount":0,"html":""}
+[2025-05-21T06:15:54.651Z] FAIL: Model did not take more than 1 turn automatically (tool log entries: 0)
+[2025-05-21T06:15:54.651Z] FAIL: Model did not use tool correctly (no tool_call_success in tool log)
+[2025-05-21T06:15:54.651Z] FAIL: Code did not return screenshot to the agent's tool call (no image_b64 in tool log)

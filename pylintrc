@@ -1,0 +1,24 @@
+[MASTER]
+ignore=static,CVS
+jobs=4
+persistent=yes
+unsafe-load-any-extension=no
+
+[MESSAGES CONTROL]
+# Disable the specified messages, categories of messages, and message patterns
+disable=
+
+[REPORTS]
+# Set the output format. Available formats are text, parseable, colorized
+output-format=text
+# Put messages in a separate file for each module / package specified on the
+# command line instead of printing them on stdout.
+files-output=no
+# Tells whether to display a full report or only the messages
+reports=no
+
+# Activate the evaluation score.
+score=yes
+# Template used to display messages. This is a python new-style format string
+# used to format the message information.
+msg-template={path}:{line}: [{msg_id}({symbol}), {obj}] {msg} 
