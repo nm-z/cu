@@ -1,0 +1,49 @@
+2025-05-20 17:17:15,633 - INFO - __main__ - onefile_fullstack_agent:1175 - Attempting pre-script killall -9 x11vnc...
+2025-05-20 17:17:15,640 - INFO - __main__ - onefile_fullstack_agent:1180 - Pre-script killall x11vnc: no process found or error (expected if none running).
+2025-05-20 17:17:16,140 - INFO - __main__ - onefile_fullstack_agent:110 - Running pre-flight checks...
+2025-05-20 17:17:16,140 - INFO - __main__ - onefile_fullstack_agent:117 - ✔︎ Critical Python dependencies seem to be imported.
+2025-05-20 17:17:16,141 - INFO - __main__ - onefile_fullstack_agent:126 - ✔︎ All required binaries found: Xvfb, openbox, x11vnc, scrot, xdotool, ss, xdpyinfo
+2025-05-20 17:17:16,141 - INFO - __main__ - onefile_fullstack_agent:132 - Checking LM Studio API at http://127.0.0.1:1234/v1/models ...
+2025-05-20 17:17:16,143 - INFO - __main__ - onefile_fullstack_agent:137 - ✔︎ LM Studio API reachable at http://127.0.0.1:1234/v1 and responded successfully.
+2025-05-20 17:17:16,143 - INFO - __main__ - onefile_fullstack_agent:142 - Pre-flight checks passed.
+2025-05-20 17:17:16,143 - INFO - __main__ - onefile_fullstack_agent:1013 - Starting X environment and VNC server...
+2025-05-20 17:17:16,143 - INFO - __main__ - onefile_fullstack_agent:1026 - Attempting to kill all x11vnc processes with command: killall -9 x11vnc
+2025-05-20 17:17:16,150 - INFO - __main__ - onefile_fullstack_agent:1031 - Kill command for x11vnc failed or no process found (code 1). Stderr: x11vnc: no process found
+2025-05-20 17:17:16,350 - INFO - __main__ - onefile_fullstack_agent:1026 - Attempting to kill all Xvfb processes with command: killall -9 Xvfb
+2025-05-20 17:17:16,357 - INFO - __main__ - onefile_fullstack_agent:1031 - Kill command for Xvfb failed or no process found (code 1). Stderr: Xvfb: no process found
+2025-05-20 17:17:16,558 - INFO - __main__ - onefile_fullstack_agent:1026 - Attempting to kill all openbox processes with command: pkill -9 -f openbox
+2025-05-20 17:17:16,577 - INFO - __main__ - onefile_fullstack_agent:1031 - Kill command for openbox failed or no process found (code 1). Stderr: 
+2025-05-20 17:17:16,778 - INFO - __main__ - onefile_fullstack_agent:1037 - Attempting to remove stale Xvfb lock file: /tmp/.X99-lock
+2025-05-20 17:17:16,788 - INFO - __main__ - onefile_fullstack_agent:1040 - Successfully removed lock file: /tmp/.X99-lock
+2025-05-20 17:17:16,888 - INFO - __main__ - onefile_fullstack_agent:1045 - Starting Xvfb on display :99...
+2025-05-20 17:17:18,889 - INFO - __main__ - onefile_fullstack_agent:1052 - ✔︎ Xvfb started successfully.
+2025-05-20 17:17:18,889 - INFO - __main__ - onefile_fullstack_agent:1060 - Starting Openbox...
+2025-05-20 17:17:19,890 - INFO - __main__ - onefile_fullstack_agent:1067 - ✔︎ Openbox started successfully.
+2025-05-20 17:17:19,890 - INFO - __main__ - onefile_fullstack_agent:1069 - Starting x11vnc on port 12345...
+2025-05-20 17:17:19,890 - INFO - __main__ - onefile_fullstack_agent:1082 - [DEBUG] Attempting to launch x11vnc detached: nohup x11vnc -display :99 -rfbport 12345 -nopw -forever -bg -rfbauth /dev/null -noxrecord -noxfixes -noxdamage -skip_lockkeys -defer 10 -wait 20 -localhost > /dev/null 2>&1 &
+2025-05-20 17:17:19,901 - INFO - __main__ - onefile_fullstack_agent:1085 - [DEBUG] x11vnc launch command executed.
+2025-05-20 17:17:19,901 - INFO - __main__ - onefile_fullstack_agent:1086 - [DEBUG] Sleeping for 5.0s to allow x11vnc to start...
+2025-05-20 17:17:24,901 - INFO - __main__ - onefile_fullstack_agent:1088 - [DEBUG] Woke up after sleep for x11vnc.
+2025-05-20 17:17:24,901 - INFO - __main__ - onefile_fullstack_agent:1096 - [DEBUG] Just before RFB handshake block on 127.0.0.1:12345...
+2025-05-20 17:17:24,901 - INFO - __main__ - onefile_fullstack_agent:1098 - [DEBUG] Attempting socket.create_connection to 127.0.0.1:12345...
+2025-05-20 17:17:24,901 - INFO - __main__ - onefile_fullstack_agent:1100 - [DEBUG] socket.create_connection successful. Attempting vnc_socket.recv(12)...
+2025-05-20 17:17:25,123 - INFO - __main__ - onefile_fullstack_agent:1102 - [DEBUG] vnc_socket.recv(12) successful. Banner: b'RFB 003.008\n'. Attempting vnc_socket.close()...
+2025-05-20 17:17:25,124 - INFO - __main__ - onefile_fullstack_agent:1104 - [DEBUG] vnc_socket.close() successful. Checking banner content...
+2025-05-20 17:17:25,124 - INFO - __main__ - onefile_fullstack_agent:1108 - ✔︎ x11vnc RFB handshake successful (Banner: b'RFB 003.008\n'). VNC server appears to be up.
+2025-05-20 17:17:25,124 - INFO - __main__ - onefile_fullstack_agent:1122 - [DEBUG] RFB handshake block completed. Proceeding to 'X environment and VNC server startup process completed.' log
+2025-05-20 17:17:25,124 - INFO - __main__ - onefile_fullstack_agent:1123 - X environment and VNC server startup process completed.
+2025-05-20 17:17:25,124 - INFO - __main__ - onefile_fullstack_agent:1124 - [DEBUG] Just after 'X environment and VNC server startup process completed.' log
+2025-05-20 17:17:25,124 - INFO - __main__ - onefile_fullstack_agent:1128 - Running runtime health checks...
+2025-05-20 17:17:25,134 - INFO - __main__ - onefile_fullstack_agent:1138 - ✔︎ X server on :99 responded to xdpyinfo.
+2025-05-20 17:17:25,175 - INFO - __main__ - onefile_fullstack_agent:1155 - ✔︎ scrot can capture screenshots (runtime check).
+2025-05-20 17:17:25,175 - INFO - __main__ - onefile_fullstack_agent:1166 - ✔︎ UI_PORT 7860 is available for binding.
+2025-05-20 17:17:25,175 - INFO - __main__ - onefile_fullstack_agent:1169 - Runtime health checks passed.
+2025-05-20 17:17:25,175 - INFO - __main__ - onefile_fullstack_agent:1188 - 🖥️ Desktop Agent starting Flask server on http://0.0.0.0:7860 (minimal startup)
+2025-05-20 17:17:25,175 - INFO - __main__ - onefile_fullstack_agent:1190 - [SERVER] Using eventlet WSGI server for Flask-SocketIO.
+2025-05-20 17:17:56,260 - INFO - __main__ - onefile_fullstack_agent:631 - [SERVER] Client connected to DEFAULT NAMESPACE ('/'). SID: None, Environ: None
+2025-05-20 17:17:56,263 - ERROR - __main__ - onefile_fullstack_agent:627 - Client-side JavaScript Error: {'message': 'Uncaught Error: Cannot use already closed WebSocket/RTCDataChannel', 'filename': 'https://cdn.jsdelivr.net/npm/@novnc/novnc@latest/core/rfb.js', 'lineno': 557, 'colno': 23, 'error_obj_str': 'Error: Cannot use already closed WebSocket/RTCDataChannel'}
+2025-05-20 17:17:56,269 - INFO - __main__ - onefile_fullstack_agent:171 - VNC client attempting to connect: SID q7e7QP5cUj3E8Dj9AAAD, Environ: {'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='utf-8'>, 'wsgi.version': (1, 0), 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'REQUEST_METHOD': 'GET', 'SCRIPT_NAME': '', 'RAW_PATH_INFO': '/socket.io/', 'PATH_INFO': '/socket.io/', 'QUERY_STRING': 'EIO=4&transport=websocket', 'CONTENT_TYPE': 'text/plain', 'SERVER_PROTOCOL': 'HTTP/1.0', 'SERVER_NAME': '127.0.0.1', 'SERVER_PORT': '7860', 'REMOTE_ADDR': '127.0.0.1', 'REMOTE_PORT': '38654', 'GATEWAY_INTERFACE': 'CGI/1.1', 'headers_raw': (('Host', '127.0.0.1:7860'), ('Connection', 'Upgrade'), ('Pragma', 'no-cache'), ('Cache-Control', 'no-cache'), ('User-Agent', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/136.0.0.0 Safari/537.36'), ('Upgrade', 'websocket'), ('Origin', 'http://127.0.0.1:7860'), ('Sec-WebSocket-Version', '13'), ('Accept-Encoding', 'gzip, deflate, br, zstd'), ('Accept-Language', 'en-US,en;q=0.9'), ('Sec-WebSocket-Key', 'lFk+9X2en46b7VxU6hvu5w=='), ('Sec-WebSocket-Extensions', 'permessage-deflate; client_max_window_bits')), 'HTTP_HOST': '127.0.0.1:7860', 'HTTP_CONNECTION': 'Upgrade', 'HTTP_PRAGMA': 'no-cache', 'HTTP_CACHE_CONTROL': 'no-cache', 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/136.0.0.0 Safari/537.36', 'HTTP_UPGRADE': 'websocket', 'HTTP_ORIGIN': 'http://127.0.0.1:7860', 'HTTP_SEC_WEBSOCKET_VERSION': '13', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br, zstd', 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.9', 'HTTP_SEC_WEBSOCKET_KEY': 'lFk+9X2en46b7VxU6hvu5w==', 'HTTP_SEC_WEBSOCKET_EXTENSIONS': 'permessage-deflate; client_max_window_bits', 'wsgi.input': <eventlet.wsgi.Input object at 0x7071c2017a80>, 'eventlet.input': <eventlet.wsgi.Input object at 0x7071c2017a80>, 'eventlet.posthooks': [], 'eventlet.set_idle': <function HttpProtocol.get_environ.<locals>.set_idle at 0x7071c20827a0>, 'flask.app': <Flask 'onefile_fullstack_agent'>, 'werkzeug.request': <Request 'http://127.0.0.1:7860/socket.io/?EIO=4&transport=websocket' [GET]>, 'saved_session': {}}
+2025-05-20 17:17:56,270 - INFO - __main__ - onefile_fullstack_agent:176 - Successfully connected to x11vnc for SID q7e7QP5cUj3E8Dj9AAAD. Starting forwarder thread.
+2025-05-20 17:17:56,270 - INFO - __main__ - onefile_fullstack_agent:184 - VNC->WS forwarder thread started for SID q7e7QP5cUj3E8Dj9AAAD
+2025-05-20 17:17:56,278 - INFO - __main__ - onefile_fullstack_agent:639 - [SERVER] Client disconnected from default namespace. SID: transport close
+2025-05-20 17:17:56,279 - INFO - __main__ - onefile_fullstack_agent:225 - VNC client disconnected: SID q7e7QP5cUj3E8Dj9AAAD. Cleaning up associated VNC TCP socket.
